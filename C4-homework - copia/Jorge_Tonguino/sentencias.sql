@@ -113,7 +113,7 @@ SELECT * FROM Book;
 
 INSERT INTO Author (Author_name, Nationality)
 VALUES ('Gabriel García Márquez', 'Colombian');
--- Resuelto satisfactoriamente.
+
 
 
 -- ELIMINAR AUTOR
@@ -132,3 +132,5 @@ WHERE Author_id NOT IN (
     FROM Book_Author
 );
 SELECT * FROM Author;
+
+-- Resuelto satisfactoriamente.
