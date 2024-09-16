@@ -109,4 +109,26 @@ WHERE Title = 'Pride and Prejudice';
 
 SELECT * FROM Book;
 
+-- Para eliminar un autor que no tenga escrito libor boya ingresar uno para luego hacer el ejercicio.
+
+INSERT INTO Author (Author_name, Nationality)
+VALUES ('Gabriel García Márquez', 'Colombian');
 -- Resuelto satisfactoriamente.
+
+
+-- ELIMINAR AUTOR
+-- consulta de autores que no han escrito libros
+SELECT Author_id, Author_name
+FROM Author
+WHERE Author_id NOT IN (
+    SELECT DISTINCT Author_id
+    FROM Book_Author
+);
+
+-- Eliminar autores que no escribieron libros CORROBORAR EN LAS IMAGENES
+DELETE FROM Author
+WHERE Author_id NOT IN (
+    SELECT DISTINCT Author_id
+    FROM Book_Author
+);
+SELECT * FROM Author;
